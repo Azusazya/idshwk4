@@ -28,5 +28,5 @@ event zeek_init()
                             if (result["count of 404 resp"]$sum > 2 && re1 > 0.2 && re2 > 0.5) {
                                 print fmt("%s is a scanner with %.0f scan attemps on %d urls", key$host, result["count of 404 resp"]$sum, result["count of uni 404 resp"]$unique);
                             }
-                        }])；
+                        }]);
 }
